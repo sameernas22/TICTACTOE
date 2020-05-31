@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(34, 26, 26);
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(121, 120, 120);
+}
+header {
+  position: relative;
+  background-color: #3a3b3a;
+  width: 90%;
+  margin: auto;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+  height: 10vh;
+  margin-bottom: 50px;
+  margin-top: 40px;
+}
+h1 {
+  top: 50%;
+  width: 100%;
+  position: absolute;
+  font-size: 2.5em;
+  color: rgb(226, 221, 221);
+  text-align: center;
+  transform: translateY(-50%);
+}
+.status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4vh 0;
+  width: 100%;
+  border-bottom: 1px solid black;
+  height: 5vh;
+}
+.status p {
+  font-size: 30px;
+}
+.status span {
+  font-size: 35px;
+  color: #6df115;
+}
+.gamelayout {
+  margin: auto;
+
+  background-color: rgb(70, 66, 66);
+  display: grid;
+  grid-gap: 10px;
+  position: relative;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+.won::before {
+  color: green;
+}
+.gamediv {
+  height: 16vh;
+  width: 100%;
+  background-color: black;
+  cursor: pointer;
+  position: relative;
+}
+
+.parent span {
+  position: absolute;
+  text-decoration: none;
+
+  color: rgb(233, 232, 232);
+  font-size: 2em;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.restart {
+  position: relative;
+  margin: 30px;
+  background-color: rgb(54, 54, 56);
+  cursor: pointer;
+  height: 6vh;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+footer {
+  text-align: center;
+}
+
+.x::before {
+  position: absolute;
+  content: "X";
+  font-size: 5em;
+  font-weight: bolder;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.o::before {
+  position: absolute;
+  font-size: 5em;
+  font-weight: bolder;
+  content: "O";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  header {
+    width: 60%;
+  }
+  .gamelayout {
+    width: 60%;
+  }
+  .restart {
+    width: 60%;
+    margin: 40px auto;
+  }
+}
+
+@media screen and (min-width: 991px) {
+  header {
+    width: 30%;
+  }
+  .gamelayout {
+    width: 40%;
+    height: 50vh;
+  }
+  .gamediv {
+    height: 100%;
+    width: 100%;
+  }
+  .restart {
+    width: 20%;
+    margin: 40px auto;
+  }
+}
